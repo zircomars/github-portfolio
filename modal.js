@@ -5,6 +5,31 @@ openModal()
 closeModal()
 modalin sisällön täyttämisen
 */
+
+/*
+
+⭐ Miksi 3–4 ranskalaista viivaa per projekti on täydellinen?
+🔹 1. Rekrytoija näkee heti olennaisen
+He eivät jaksa lukea pitkiä tekstiseiniä.
+3–4 bulletia kertoo:
+
+mitä teit
+
+miksi teit
+
+miten ratkaisit sen
+
+mikä oli lopputulos
+
+Se riittää 90 %:lle lukijoista.
+
+🔹 2. Tekniset lukijat voivat avata projektin syvemmälle
+Jos joku haluaa tietää lisää, hän klikkaa projektin auki.
+Mutta etusivulla pitää olla tiivis ja iskevä.
+
+🔹 3. Rakenne pysyy yhtenäisenä
+Kun jokainen projekti noudattaa samaa kaavaa, portfolio näyttää ammattimaiselta ja huolitellulta.*/
+
 // --------------------------------------
 // PROJECT DATA (carousel + grid + modal) - PROJEKTISTA LISÄTIETOA KLIKKATTUNA
 // --------------------------------------

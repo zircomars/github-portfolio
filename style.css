@@ -1043,30 +1043,4 @@ footeri - ALEMPI YHTEISTIEDOT START HERE*/
 }
 
 
-.footer-social {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    padding: 2rem 0;
-  }
-  
-  .footer-social a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    transition: all 0.3s ease;
-  }
-  
-  .footer-social a:hover {
-    background: #00eaff;
-    transform: translateY(-3px);
-  }
-
-
-
-  
+ 
