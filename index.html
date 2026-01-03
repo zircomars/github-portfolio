@@ -17,7 +17,7 @@
 <!-- HEADER / NAVIGATION -->
 <header class="header-row">
     <div class="header-left">
-        <a href="index.html" class="logo">Bax.System</a>
+        <a href="index.html" class="logo"></a>
     </div>
 
     <nav class="header-nav">
@@ -45,8 +45,8 @@
     <a href="#otayhteytta">Ota yhteyttä</a>
 
     <div class="mobile-social">
-        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/zhao-t-3b5b18158/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/zircomars" target="_blank"><i class="fab fa-github"></i></a>
         <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
     </div>
 </div>
@@ -271,7 +271,8 @@
                 </div>-->
 
                 <!-- Yhteydenottolomake -->
-                <form class="contact-form" onsubmit="event.preventDefault(); alert('Kiitos viestistä! (Demo)');">
+                <form class="contact-form" action="https://formspree.io/f/xykzdqlw"
+  method="POST" enctype="multipart/form-data" onsubmit="event.preventDefault(); alert('Kiitos viestistä! (Demo)');">
                     <div class="form-group">
                         <label for="name">Nimi</label>
                         <input type="text" id="name" placeholder="Matti Meikäläinen">
@@ -290,11 +291,22 @@
                     <button type="submit" class="contact-btn">Lähetä</button>
                 </form>
 
-                <div class="contact-social">
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:sinun.email@domain.com"><i class="fas fa-envelope"></i></a>
+                <div class="contact-row">
+                    
+                    <!-- Vasemmalla: Social icons -->
+                    <div class="contact-social">
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:sinun.email@domain.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+
+                    <!-- Oikealla: Sijainti -->
+                    <div class="contact-location">
+                        <p><strong>Sijainti:</strong> Uusimaa, Suomi</p>
+                    </div>
+
                 </div>
+
             </div>
         </div>
     </div>
