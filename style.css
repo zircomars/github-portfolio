@@ -1,0 +1,1058 @@
+/* Perustyyli */
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: #1a1a1a;
+    color: #e6e6e6;
+    overflow-x: hidden;
+
+}
+
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-weight: 625;
+    /*font-size: clamp(1.5rem, 4vw, 3rem);*/
+}
+
+/*SMOOTH SCROLL*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* ###############################################################*/ 
+/* intro content H1 otsikko - START HERE */
+.typewriter {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Kursori */
+#typewriter-loop {
+  border-right: 2px solid #fff;
+  padding-right: 6px;
+  animation: caret 0.7s infinite;
+}
+
+@keyframes caret {
+  50% { border-color: transparent; }
+}
+
+/* Puhelinnäytöt: tiputa looppi omalle riville */
+@media (max-width: 480px) {
+  .typewriter {
+    font-size: 1.4rem;
+    white-space: normal; /* sallii rivinvaihdon */
+    display: flex;
+    flex-direction: column; /* tiputtaa loopin alas */
+    gap: 4px;
+  }
+
+  #typewriter-loop {
+    align-self: flex-start; /* pitää tekstin vasemmalla */
+  }
+}
+
+/* ABOUT SKILLS CSS - START HERE; */
+.skills {
+  margin-top: 20px;
+}
+
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  background: #1f1f1f;
+  border: 1px solid #3a3a3a;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  transition: 0.2s ease;
+}
+
+.badge:hover {
+  /*background: #0078d4;*/
+  Border-color: #00eaff;
+  cursor: default;
+}
+
+
+/*######################################################################*/
+
+/* =========================================
+   HEADER / NAVIGAATIO - YLEMPI OSA 
+   ========================================= */
+
+.header-row {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0a0a0a;
+    border-bottom: 1px solid #222;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.6);
+
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+
+/* Logo + vasen osa */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    color: #CCC;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* Keskimmäinen navigaatio */
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* VALIKKOT ABOUT ME , ETUSIVU, PROJEKTIT */
+.header-nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1.0rem;
+    transition: 0.2s;
+    padding-inline: 25px;
+}
+
+.header-nav a:hover {
+    color: #00eaff;
+}
+
+/* some-ikonit */
+.header-social {
+    display: flex;              /* korjaa display: auto */
+    justify-content: center;    /* keskittää ikonit */
+    align-items: center;
+    gap: 40px;                  /* isompi väli ikonien väliin */
+    padding: 20px 0;            /* vähän ilmaa ylä/ala-suunnassa */
+}
+
+.header-social a {
+    color: #cfcfcf;
+    text-decoration: none;
+    font-size: 2rem;            /* isompi ikonien koko */
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.header-social a:hover {
+    color: #00eaff;
+    transform: translateY(-3px) scale(1.1); /* kevyt hover-efekti */
+}
+
+
+
+/* Hamburger – piilossa desktopissa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: #ff7b00;    /* DEBUG: oranssi laatikko */
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.hamburger span {
+    width: 22px;
+    height: 3px;
+    background: #000;
+    margin: 3px 0;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: #0a0a0a;
+    padding: 16px 20px;
+    border-top: 1px solid #222;
+    box-sizing: border-box;
+    width: 100%;
+
+    position: fixed;    
+    top: 60px;          /* headerin korkeus (säädä tarvittaessa) */
+    left: 0;
+
+    z-index: 99999;
+}
+
+
+.mobile-menu a {
+    padding: 10px 0;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.mobile-menu a:hover {
+    color: #00eaff;
+}
+
+.mobile-social {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+}
+
+.mobile-social a {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Kun .active-luokka lisätään JS:llä, näytetään valikko */
+.mobile-menu.active {
+    display: flex;
+}
+
+
+/* ==============================
+   RESPONSIVE BREAKPOINT
+   NAV BAR ETUSIVU/ABOUTME SUPISTUU - TULEE BURGERI ICON JA KLIKKAUKSESTA VOI AVATA LISTAUKSENSA
+   SEKÄ TAKAISIN LAAJENTAA SIVUSTON ISOMMAKSI BURGERI KATOAA
+   ============================== */
+
+@media (max-width: 900px) {
+
+    /* Piilotetaan keskimmäinen nav + oikean reunan some */
+    .header-nav,
+    .header-social {
+        display: none;
+    }
+
+    /* Näytetään burgeri logon oikealla puolella */
+    .hamburger {
+        display: flex;
+        margin-left: auto; /* työntää burgerin oikealle logon rivillä */
+    }
+
+    .header-row {
+        justify-content: flex-start;
+        gap: 12px;
+    }
+}
+
+/* Desktop override: piilota mobile-menu aina leveässä näkymässä */
+@media (min-width: 901px) {
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+
+/* ###################################################################### */
+/* Kevyt visualisointi taustalla - START HERE;*/
+.background-visual {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.08), transparent 60%),
+                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05), transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ALKU KUKA OLEN, OTSIKKO JA PROJEKTI TEKSTI SISÄLTÖ*/
+.intro-header {
+  position: relative;
+  width: 100%;
+  height: 550px; /* voit säätää 300–500px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+  margin-top: 20px; /* jos nav on fixed */
+}
+
+.background-visual {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('C:/Users/zhao-/Downloads/pexels-creative-vix-9754.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.65);
+  z-index: 1;
+}
+
+.intro-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.intro-content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.intro-content p {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  opacity: 0.85;
+}
+
+
+/*image background visual for mobile*/
+@media (max-width: 600px) {
+  .intro-header {
+    height: 260px;
+  }
+}
+
+
+
+/*===================================================================*/
+/* Kortit */
+.content {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(6px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Responsiivisuus */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .card {
+        padding: 18px;
+    }
+}
+
+/*===================================================================*/
+/* carousel-container - START HERE;*/
+
+.project-carousel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+/* PROJEKTI CAROUSEL OTSIKKO */
+/* Otsikko keskelle kuten alkuperäinen */
+.project-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.project-header h2 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #fff; /* tai mikä tahansa sun neon/cyber-väri */
+}
+
+/*CAROUSEL - GRID KORTTI NÄKYMÄ VAIHTO BUTTON - START HERE;*/
+.project-view-toggle {
+  text-align: center;
+  margin-top: clamp(10px, 2vh, 20px);
+  margin-bottom: clamp(10px, 2vh, 20px);
+}
+
+.view-toggle {
+  display: inline-block;
+  width: 120px;                
+  padding: 10px 0;
+  text-align: center;
+
+  background: rgba(20, 20, 20, 0.8);
+  color: #00eaff;               /* Neon-sininen teksti */
+  border: 2px solid #00eaff;    /* Neon-sininen reuna */
+
+  border-radius: 6px;           /* Voit muuttaa 0px → kulmikas */
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1px;
+
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.15s ease;
+}
+
+.view-toggle:hover {
+  background: rgba(0, 234, 255, 0.15); /* Neon glow overlay */
+  box-shadow: 0 0 12px #00eaffa7;        /* Hehku */
+  transform: translateY(-2px);         /* Pieni futuristinen “lift” */
+}
+
+
+
+/* projekti carousell SISÄINEN kortti- START HERE;; */
+/* Smooth slide + fade + depth */
+.project-card {
+    width: clamp(240px, 60vw, 350px);
+    height: clamp(180px, 50vw, 280px);
+    background: #d9d9d9;
+    border-radius: 5px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* tämä työntää tekstin alas */
+    align-items: center;
+
+    padding: 10px 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    color: #222;
+    opacity: 0;
+    transform: translateX(0) scale(0.9);
+    transition:
+        transform 0.55s cubic-bezier(.25,.8,.25,1),
+        opacity 0.45s ease,
+        z-index 0.2s ease;
+}
+
+/* projekti korttien sisältö gallery muotoisena*/
+.project-card h3 {
+    margin: 0 0 12px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 12px;
+    width: 100%;
+    word-wrap: break-word; /* ← estää pitkät sanat karkaamasta */
+}
+
+/* projektien korttien kuvausta lyhyesti ja jos teksti menee yli se leikkaa sen*/
+.project-card p {
+    margin: 5px 0 0;
+    margin-top: 12px;
+    font-size: 0.95rem;
+    text-align: center;
+    opacity: 0.8;
+    width: 100%;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+/* projektien kortti esitys voi klikkata hiirellä (osoittaa voi klikata) ja tämä koskee GRID näkymänsä*/
+.project-card,
+.grid-card {
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+/* KORTTIEN ESITTELY NÄKYMÄNSÄ */
+/* Keskikortti */
+.project-card.center {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 3;
+}
+
+/* Vasemman puolen kortti */
+.project-card.left {
+    transform: translateX(-25vw) scale(0.85);
+    opacity: 0.6;
+    z-index: 2;
+}
+
+/* Oikean puolen kortti */
+.project-card.right {
+    transform: translateX(25vw) scale(0.85);
+    opacity: 0.6;
+    z-index: 2;
+}
+
+/* varmistus että koko osio pysyy keskellä */
+nav.project-carousel {
+  display: block;
+  text-align: center;
+}
+
+
+/* ============================================================ */
+/*css GRID layout - START HERE; */
+
+/* Grid-kortti käyttää samaa tyyliä kuin project-card,
+   mutta ilman absolute positioning ja transformeja */
+.hidden {
+    display: none !important;
+}
+
+/* Carousel container pitää korkeuden, mutta se EI saa olla gridin päällä */
+.project-carousel-inner {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Grid view */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 30px auto 0;
+    padding: 0 20px 20px;
+}
+
+/* Grid-kortin tyyli – sama henki kuin project-card, mutta ilman absolutea */
+.grid-card {
+    background: #d9d9d9;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    padding: 20px;
+    color: #222;
+
+    position: static;
+    opacity: 1;
+    transform: none;
+    transition: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+}
+
+.grid-card h3 {
+    margin: 0 0 12px;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.grid-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    text-align: center;
+    opacity: 0.8;
+    width: 100%;
+    line-height: 1.4;
+}
+
+#projects {
+    scroll-margin-top: 70px;
+}
+
+/*===================================================================*/
+/* MODAL OVERLAY - KLIKKATESSA PROJEKTIKUVASTA PONNAHDUS ISOMPI KUVA RAKENNE
+PROJEKTIKUVA LISÄTIETO , TEKSTI + KUVA - START HERE */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.25s ease-out;
+}
+
+/* MODAL CONTENT */
+.modal-content {
+  background: #293134;
+  opacity: 0.85;
+  border: 2px solid #00eaff;
+  box-shadow: 0 0 20px #00eaff;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 950px;
+  max-height: 90vh;
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+  overflow-y: auto;
+  position: relative;
+  animation: scaleIn 0.25s ease-out;
+}
+
+/* LEFT SIDE (TEXT) */
+.modal-left {
+  flex: 1;
+  background: #21292C;
+  opacity: 0.9;
+  padding: 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05); 
+}
+
+
+#modalDesc {
+  margin-top: 12px;
+  line-height: 1.6;
+  white-space: pre-line;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  border-left: 3px solid #00eaff;
+  padding-left: 10px;
+}
+
+
+/* RIGHT SIDE (IMAGE) */
+.modal-right {
+  flex: 1;
+  display: flex;
+  background-color: #21292C;
+  opacity: 0.8;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-right img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;         /* toimii eri kokoisilla kuvilla */
+  border-radius: 10px;
+  border: 1px solid #00eaff;
+  box-shadow: 0 0 12px rgba(0,234,255,0.4);
+  transition: transform 0.25s ease;
+}
+
+.modal-right img:hover {
+  transform: scale(1.03);
+}
+
+/* CLOSE BUTTON */
+.modal-close {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #fff;
+}
+
+/* RESPONSIVE MOBILE VERSION */
+@media (max-width: 600px) {
+.modal-content { 
+    flex-direction: column;
+  }
+
+  .modal-right img {
+    max-height: 40vh;
+  }
+
+  .modal-close {
+    top: 5px;
+    right: 50px;
+    font-size: 1.2rem;
+  }
+}
+
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+/*===================================================================*/
+/* AIKJANA - KOKEMUS + KOULUTUS LEIMA - START HERE;*/
+
+.timeline-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+
+}
+
+.timeline-title {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.timeline-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.timeline-column h3 {
+    font-family: "Inter", sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.timeline-item {
+    background: rgba(255,255,255,0.05);
+    border-left: 3px solid #00eaff;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    transition: 0.3s ease;
+}
+
+.timeline-item:hover {
+    background: rgba(0,234,255,0.1);
+    box-shadow: 0 0 12px #00eaff;
+}
+
+.timeline-year {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    color: #00eaff;
+    margin-bottom: 6px;
+}
+
+/* Mobiili */
+@media (max-width: 700px) {
+    .timeline-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+#timeline {
+    scroll-margin-top: 70px;
+}
+
+/*===================================================================*/
+/* DOWNLOAD RESUME/CV & COVER LETTER */
+
+/* Otsikko keskelle */
+.resume-title {
+    text-align: center;
+    margin-bottom: 12px; /* tiiviimpi */
+}
+
+.resume-text {
+    text-align: center;
+    margin-bottom: 10px; /* lisää rytmiä */
+}
+
+/* Kortin sisäinen padding tiiviimmäksi */
+.resume-card {
+    max-width: 900px;      /* sama mittakaava kuin timeline-section */
+    margin: 20px auto;        /* keskittää kortin */
+    margin-top: 40px;
+    padding: 25px 24px;    /* tiivis, mutta hengittävä */
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+}
+
+
+/* Kaksi noppaa vierekkäin */
+.resume-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* tiiviimpi leveys */
+    justify-content: center;                /* keskittää napit */
+    gap: 8px;                                /* pienempi väli */
+    margin-top: 10px;
+}
+
+/* Noppamaiset laatikot */
+.resume-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;                 /* tasainen leveys */
+    height: 75px;                /* tasainen korkeus -> täydellinen noppamainen */
+    background: rgba(255, 255, 255, 0.07);
+    border: 0.5px solid rgba(255, 255, 255, 0.12);
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rm;          /* sopii pienempään laatikkoon */
+    transition: 0.25s ease;
+    backdrop-filter: blur(4px);
+}
+
+.resume-box:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Mobiili: laatikot allekkain */
+@media (max-width: 600px) {
+    .resume-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .resume-box {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+
+#resume {
+    scroll-margin-top: 50px;
+}
+
+
+/*===================================================================*/
+/* CONTACT SECTION & YHTEISTIEDOT / OTA YHTEYTTÄ */
+#contact {
+    margin-top: 60px;
+}
+
+/* 3:7 layout kortin sisällä */
+.contact-card .contact-inner {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+/* 3/10 kuva */
+.contact-card .contact-photo {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-card .contact-photo img {
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 0 12px rgba(0,234,255,0.25);
+}
+
+/* 7/10 sisältö */
+.contact-card .contact-content {
+    flex: 7;
+}
+
+/* Ranskalaiset viivat ja yhteystiedot */
+.contact-card .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+    text-align: left;
+}
+
+.contact-card .contact-list li {
+    margin-bottom: 6px;
+    opacity: 0.9;
+}
+
+.contact-card .contact-details p {
+    margin: 4px 0;
+    font-weight: 500;
+    text-align: left;
+}
+
+/* Mobiili: pystysuuntaan */
+@media (max-width: 700px) {
+    .contact-card .contact-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-card .contact-photo img {
+        max-width: 150px;
+        height: 150px;
+    }
+
+    .contact-card .contact-list,
+    .contact-card .contact-details p {
+        text-align: center;
+    }
+}
+
+
+/* Kontaktin/Yhteydenotto lomake */
+.contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.contact-form label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 4px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-family: "Inter", sans-serif;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.25s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00eaff;
+}
+
+/* kontakti/lomake button lähetä nappi*/
+.contact-btn {
+    padding: 12px 20px;
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+    background: 0.25s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    background: #00eaff;
+}
+
+
+
+/* Contact-kortin social-ikonit (OTA YHTEYTTÄ) */
+.contact-social {
+    margin-top: 20px;
+    display: inline-flex;
+    justify-content: center;
+    gap: 40px;              /* iso väli ikonien väliin */
+}
+
+.contact-social a {
+    color: #cfcfcf;
+    font-size: 2rem;        /* isot ikonit */
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.contact-social a:hover {
+    color: #00eaff;
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* Mobiili: pienempi gap ja ikonit hieman pienemmiksi */
+@media (max-width: 700px) {
+    .contact-social {
+        gap: 28px;
+    }
+    .contact-social a {
+        font-size: 1.7rem;
+    }
+}
+
+
+
+/*===================================================================
+footeri - ALEMPI YHTEISTIEDOT START HERE*/
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #0d0d0d;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+.footer-tagline {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+  
+  .footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transition: all 0.3s ease;
+  }
+  
+  .footer-social a:hover {
+    background: #00eaff;
+    transform: translateY(-3px);
+  }
+
+
+
+  
