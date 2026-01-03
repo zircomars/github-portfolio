@@ -979,34 +979,48 @@ PROJEKTIKUVA LISÄTIETO , TEKSTI + KUVA - START HERE */
 
 
 
-/* Contact-kortin social-ikonit (OTA YHTEYTTÄ) */
-.contact-social {
-    margin-top: 20px;
-    display: inline-flex;
-    justify-content: center;
-    gap: 40px;              /* iso väli ikonien väliin */
+/* Contact-kortin social-ikonit (OTA YHTEYTTÄ) *//* Social + Location vierekkäin */
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
 }
 
+/* Social icons */
 .contact-social a {
-    color: #cfcfcf;
-    font-size: 2rem;        /* isot ikonit */
-    transition: color 0.25s ease, transform 0.25s ease;
+    margin-right: 12px;
+    font-size: 2em;
+    color: #fff;
+    opacity: 0.85;
+    transition: 0.25s ease;
 }
 
 .contact-social a:hover {
+    opacity: 1;
     color: #00eaff;
-    transform: translateY(-3px) scale(1.1);
 }
 
-/* Mobiili: pienempi gap ja ikonit hieman pienemmiksi */
-@media (max-width: 700px) {
-    .contact-social {
-        gap: 28px;
+/* Location text */
+.contact-location p {
+    margin: 0;
+    opacity: 0.85;
+    font-weight: 500;
+}
+
+/* Mobiili: pinotaan allekkain */
+@media (max-width: 600px) {
+    .contact-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
     }
+
     .contact-social a {
-        font-size: 1.7rem;
+        margin-right: 8px;
     }
 }
+
 
 
 
