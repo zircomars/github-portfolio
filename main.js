@@ -1,6 +1,6 @@
 /* intro content H1 otsikko*/
 const words = [
-    "Bax, Vantaa (Finland)",
+    "Zhao, Helsinki (Suomi)",
     "administrator",
     "IT support",
     "järjestelmänvalvoja",
