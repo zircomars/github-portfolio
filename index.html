@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    <title>Portfolio – Bax</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- social media icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!--font kaikki samanlaiseksi-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR KLIKKAUS MENEE OTSIKKOON JA NAVBAR LÄHTEE MUKAN ALAS/YLÖS-->
+<div id="top"></div>
+
+<!-- HEADER / NAVIGATION -->
+<header class="header-row">
+    <div class="header-left">
+        <a href="index.html" class="logo">Bax.System</a>
+    </div>
+
+    <nav class="header-nav">
+        <a href="#top">Etusivu</a>
+        <a href="#about">Minusta</a>
+        <a href="#projects">Projektit</a>
+        <a href="#timeline">Aikajana</a>
+        <a href="#resume">CV</a>
+        <a href="#otayhteytta">Ota yhteyttä</a>
+    </nav>
+
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#top">Etusivu</a>
+    <a href="#about">Minusta</a>
+    <a href="#projects">Projektit</a>
+    <a href="#timeline">Aikajana</a>
+    <a href="#resume">CV</a>
+    <a href="#otayhteytta">Ota yhteyttä</a>
+
+    <div class="mobile-social">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+    </div>
+</div>
+
+
+
+<!-- ALKU KUKA OLEN, TAUSTAKUVA MAISEMA, OTSIKKO JA PROJEKTIT TEKSTI SISÄLTÖ - START HERE -->
+<header class="intro-header">
+  <div class="background-visual"></div>
+
+  <div class="intro-content">
+    <h1 class="typewriter">
+        Olen <span id="typewriter-loop"></span>
+    </h1>
+
+    <p>IT-tuki • järjestelmänvalvoja • kyberturvallisuusasiantuntija</p>
+
+    <div class="header-social">
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:youremail@example.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- KONTEKSTIT - ABOUT ME JA TAIDOT - START HERE; -->
+    <section id="about" class="content">
+        <div class="card">
+            <h2>Kuka olen</h2>
+            <p>
+                Olen tekninen asiantuntija ja järjestelmäarkkitehtuurista kiinnostunut
+                suunnittelija. Yhdistän IT‑infran, automaation ja digitaalisen
+                toiminnallisuuden kehittämisen. Työskentelytapani on iteratiivinen ja
+                tutkiva: testaan, analysoin ja kokoan ratkaisuja pienistä osista
+                toimiviksi ja turvallisiksi kokonaisuuksiksi.
+            </p>
+            <ul> 
+                <li>Harjoittelen ja testaan teknologioita omassa labra‑ympäristössä.</li>
+                <li>Rakennan pienistä osista toimivia kokonaisuuksia ja automatisointeja.</li>
+                <li>Jatkuvaa oppimista – teknologia, harjoitukset ja oppiminen eivät pysähdy.</li>
+            </ul>
+        </div>
+
+    <div class="card">
+        <div class="skills">
+        <h2>Taidot</h2>
+            <div class="badge-container">
+                <span class="badge">M365</span>
+                <span class="badge">Azure AD / Entra ID</span>
+                <span class="badge">Windows Server</span>
+                <span class="badge">Active Directory</span>
+                <span class="badge">PowerShell</span>
+                <span class="badge">Cisco / CCNA</span>
+                <span class="badge">Kali Linux</span>
+                <span class="badge">Automation</span>
+                <span class="badge">AI Tools</span>
+            </div>
+        </div>
+    </div>
+
+    </section>
+    
+<!-- PROJECT GALLERY START HERE; -->
+<nav id="projects" class="project-carousel">
+
+    <div class="project-header">
+        <h2>&lt; Projektit &gt;</h2>
+    </div>
+
+    <div class="project-view-toggle">
+    <button id="toggleView" class="view-toggle">Grid</button>
+    </div>
+
+  <!-- CAROUSEL VIEW -->
+  <div class="project-carousel-inner" id="projectCarousel">
+    <div class="project-card left" id="leftCard">
+      <h3 class="project-title"></h3>
+      <p class="project-desc"></p>
+    </div>
+
+    <div class="project-card center" id="centerCard">
+      <h3 class="project-title"></h3>
+      <p class="project-desc"></p>
+    </div>
+
+    <div class="project-card right" id="rightCard">
+      <h3 class="project-title"></h3>
+      <p class="project-desc"></p>
+    </div>
+  </div>
+
+  <!-- GRID VIEW (ALUKSI PIILOSSA) -->
+  <div class="project-grid hidden" id="projectGrid"></div>
+
+</nav>
+
+<!-- PROJEKTIKUVA KLIKKAUKSESTA KOHTI LISÄTIETO , TEKSTI + KUVA -->
+<div id="projectModal" class="modal hidden">
+  <div class="modal-content">
+
+    <button class="modal-close" id="modalClose">✕</button>
+
+    <div class="modal-left">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+    </div>
+
+    <div class="modal-right">
+      <img id="modalImage" src="" alt="Projektikuva">
+    </div>
+
+  </div>
+</div>
+
+
+<!-- PROJEKTIT/AIKAJANA/KOKEMUS+KOULUTUKSET-->
+
+<section id="timeline" class="timeline-section">
+    <h2 class="timeline-title">&lt; AIKAJANA &gt;</h2>
+
+    <div class="timeline-grid">
+
+        <!-- Vasen puoli: Työkokemus -->
+        <div class="timeline-column">
+            <h3>Työkokemus</h3>
+
+            <div class="timeline-item">
+                <span class="timeline-year">2024–2025</span>
+                <p>IT‑tuki & järjestelmänvalvonta – automaatio, valvonta, kyberturva</p>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">2022–2024</span>
+                <p>- Junior IT Specialist – AD, M365, palvelimet</p>
+                <p>- Junior IT Specialist – AD, M365, palvelimet</p>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">2019–2022</span>
+                <p>IT‑harjoittelija – perus ylläpito, käyttäjätuki</p>
+                <p>IT‑harjoittelija – perus ylläpito, käyttäjätuki</p>
+            </div>
+        </div>
+
+        <!-- Oikea puoli: Koulutus -->
+        <div class="timeline-column">
+            <h3>Koulutus</h3>
+
+            <div class="timeline-item">
+                <span class="timeline-year">2023–2024</span>
+                <p>Kyberturvallisuuden lisäkoulutus – SOC, valvonta, riskienhallinta</p>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">2020–2023</span>
+                <p>IT‑alan tutkinto – järjestelmät, verkot, automaatio</p>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-year">2018–2020</span>
+                <p>Perustutkinto – tietotekniikan perusteet</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- DOWNLOAD RESUME/CV & COVER LETTER  - START HERE; -->
+
+<div id="resume" class="card resume-card">
+    <h2 class="resume-title">&lt; Resume / CV &gt;</h2>
+    <p class="resume-text">
+        Lataa CV ja avoin hakemus PDF‑muodossa.
+    </p>
+
+    <div class="resume-grid">
+        <a href="/assets/docs/cv.pdf" class="resume-box" download>
+            <span>CV (PDF)</span>
+        </a>
+
+        <a href="/assets/docs/coverletter.pdf" class="resume-box" download>
+            <span>Cover Letter (PDF)</span>
+        </a>
+    </div>
+</div>
+
+
+
+<!-- FURURISTINEN SYSTEM STATUS WIDGET (BONUS) CONTACT SECTION & OTA YHTEYTTÄ -->
+<section id="otayhteytta">
+    <div class="card resume-card contact-card">
+
+        <!-- Sama otsikkotyyli kuin CV-kortissa -->
+        <h2 class="resume-title">&lt; Ota yhteyttä &gt;</h2>
+
+        <!-- 3:7 layout kortin sisällä -->
+        <div class="contact-inner">
+
+            <!-- 3/10 kuva -->
+            <div class="contact-photo">
+                <img src="images/images1.png" alt="Profiilikuva">
+            </div>
+
+            <!-- 7/10 sisältö -->
+            <div class="contact-content">
+                <p class="resume-text">
+                    Heräsikö kysyttävää tai kiinnostaisiko keskustella lisää? <br> Ota yhteyttä – vastaan mielelläni. 
+                </p>
+                
+
+                <!--
+                <div class="contact-details">
+                    <p><strong>Sähköposti:</strong> sinun.email@domain.com</p>
+                    <p><strong>Puhelin:</strong> 040 123 4567</p>
+                </div>-->
+
+                <!-- Yhteydenottolomake -->
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Kiitos viestistä! (Demo)');">
+                    <div class="form-group">
+                        <label for="name">Nimi</label>
+                        <input type="text" id="name" placeholder="Matti Meikäläinen">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Sähköposti</label>
+                        <input type="email" id="email" placeholder="Sähköpostisi">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Viesti</label>
+                        <textarea id="message" rows="4" placeholder="Kirjoita viestisi..."></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-btn">Lähetä</button>
+                </form>
+
+                <div class="contact-social">
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:sinun.email@domain.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- FOOTER YHTEISITEDOT ALHAALLA - START HERE;-->
+<br>
+<footer class="footer-row">
+    <div class="left">
+        © 2025 - All Systems Operational
+        <div class="footer-tagline">
+            Kiinnostuitko? Avoin projekteille, ideoille ja keskustelulle — ota yhteyttä.
+        </div>
+    </div>
+
+    
+    <div class="footer-social">
+        <a href="https://facebook.com/yourpage" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com/yourhandle" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    
+</footer>
+
+<script src="main.js"></script>
+<script src="modal.js"></script>
+<script src="roulette.js"></script>
+</body>
+</html>
