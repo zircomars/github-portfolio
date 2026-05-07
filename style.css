@@ -1022,6 +1022,59 @@ PROJEKTIKUVA LISÄTIETO , TEKSTI + KUVA - START HERE */
 }
 
 
+/*PÄIVITYSLOKITUS & TERMINAL VIEW - START HERE ===============*/
+
+/* TERMINAALI / LOGIKORTTI - ERILLINEN TYYLI */
+.terminal-card {
+  background: #0b0b0b;
+  border: 1px solid #1f1f1f;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 40px;
+  font-family: "Fira Code", monospace;
+  color: #00ff9d;
+  box-shadow: 0 0 20px rgba(0, 255, 150, 0.1);
+}
+
+.terminal-header {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #00eaff;
+  border-bottom: 1px solid #1f1f1f;
+  padding-bottom: 8px;
+}
+
+.terminal-body p {
+  margin: 4px 0;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  line-height: 1.4;
+  color: #00ff9d;
+}
+
+.terminal-body p::before {
+  content: "> ";
+  color: #00eaff;
+}
+
+.terminal-body {
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* Scrollbar (tyylikäs, ei riko portfolioa) */
+.terminal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+  background: #1f1f1f;
+  border-radius: 4px;
+}
+
+
+
 /*===================================================================
 footeri - ALEMPI YHTEISTIEDOT START HERE*/
 .footer-row {
