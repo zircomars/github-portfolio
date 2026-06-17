@@ -1,7 +1,7 @@
 /* intro content H1 otsikko*/
 const words = [
     "Zhao, Helsinki (Suomi)",
-    "administrator",
+    "system administrator",
     "IT support",
     "järjestelmänvalvoja",
     "technical specialist"

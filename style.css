@@ -67,6 +67,12 @@ html {
   gap: 10px;
 }
 
+.badge-container-AI {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .badge {
   background: #1f1f1f;
   border: 1px solid #3a3a3a;
@@ -601,7 +607,7 @@ PROJEKTIKUVA LISÄTIETO , TEKSTI + KUVA - START HERE */
   box-shadow: 0 0 20px #00eaff;
   border-radius: 12px;
   width: 90%;
-  max-width: 950px;
+  max-width: auto;
   max-height: 90vh;
   padding: 30px;
   display: flex;
@@ -639,19 +645,22 @@ PROJEKTIKUVA LISÄTIETO , TEKSTI + KUVA - START HERE */
   flex: 1;
   display: flex;
   background-color: #21292C;
-  opacity: 0.8;
+  opacity: 1.0;
   justify-content: center;
   align-items: center;
 }
 
 .modal-right img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 80vh;        /* tärkein: kuva ei kasva liian korkeaksi */
+  width: auto;
   height: auto;
-  object-fit: contain;         /* toimii eri kokoisilla kuvilla */
+  object-fit: contain;
   border-radius: 10px;
   border: 1px solid #00eaff;
-  box-shadow: 0 0 12px rgba(0,234,255,0.4);
+  box-shadow: 0 0 8px rgba(0,234,255,0.4);
   transition: transform 0.25s ease;
+  cursor: zoom-in;         /* näyttää että kuvaa voi klikata */
 }
 
 .modal-right img:hover {

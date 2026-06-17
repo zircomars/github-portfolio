@@ -8,17 +8,37 @@ index‑logiikan
 // --------------------------------------
 /* 5-6 PROJEKTIA LYHYESTI - ESIKATSELLU JA LYHYT KUVAUS */
 const projects = [
-    { title: "Projekti - 1 PowerShell-skriptit – automaatio ja IAM ", desc: "Rakensin Entra ID -pohjaisen automaation PowerShell skriptin, joka hyödyntää Graph API -tokenia ja suodattaa käyttäjätietoja SQL-tyylisesti." },
+    {
+        title: "Luotea Hackathon – WorkPulse (3. sija)",
+        desc: "3. sija · Rakensin tiimin kanssa data‑pohjaisen ratkaisun, joka hyödynsi 389 sensoria, 628 päivän käyttödataa ja 6 datasettiä ennustamaan rakennusten käyttöastetta ja huollon kuormitusta."
+    },
 
-    { title: "Projekti - 2 Kali Linux – hiekkalaatikkotestit ", desc: "Kali Linux -hiekkalaatikkoympäristö, jossa testasin keskeisiä tietoturvatyökaluja, harjoittelin tiedonhakua ja seurasin Cisco Academy Ethical Hacking -moduulia sekä Natas-harjoituksia." },
+    {
+        title: "Projekti - 1 PowerShell-skriptit – automaatio ja IAM",
+        desc: "Rakensin Entra ID -pohjaisen automaation PowerShell skriptin, joka hyödyntää Graph API -tokenia ja suodattaa käyttäjätietoja SQL-tyylisesti."
+    },
 
-    { title: "Projekti - 3 MySQL-tietokannan pentest Kali Linuxilla ", desc: "Kali Linux -hiekkalaatikkoympäristö, jossa asensin MySQL-tietokannan ja harjoittelin sen peruspentestauksia, haavoittuvuuksien tunnistamista ja oman testisivun parantamista." },
+    {
+        title: "Projekti - 4 Windows Server - yritysverkko projekti",
+        desc: "Windows Server -hiekkalaatikkoympäristö, jossa rakensin oman yritysverkon ja harjoittelin AD-, GPO- ja palvelinympäristön ylläpitoa."
+    },
 
-    { title: "Projekti - 4 Windows Server - yritysverkko projekti ", desc: "Windows Server -hiekkalaatikkoympäristö, jossa rakensin oman yritysverkon, harjoittelin AD- ja GPO-hallintaa, käyttäjähallintaa, PowerShelliä ja palvelinympäristön ylläpitoa." },
+    {
+        title: "Projekti - 2 Kali Linux – hiekkalaatikkotestit",
+        desc: "Kali Linux -ympäristö, jossa harjoittelin tietoturvatyökaluja, Cisco Academy Ethical Hacking -moduulia ja Natas-harjoituksia."
+    },
 
-    { title: "Projekti - 5 Portfolio-rakenne ", desc: "HTML5-, CSS- ja JavaScript-pohjainen portfolio, jonka suunnittelin ja rakensin hyödyntäen aiempia opintoja, harjoituksia ja omaa teknistä osaamistani. Tavoitteena oli luoda selkeä, responsiivinen ja helposti luettava kokonaisuus." },
+    {
+        title: "Projekti - 3 MySQL-tietokannan pentest Kali Linuxilla",
+        desc: "Asensin MySQL-tietokannan ja harjoittelin sen peruspentestauksia sekä oman testisivun suojaamista."
+    },
 
+    {
+        title: "Projekti - 5 Portfolio-rakenne",
+        desc: "HTML-, CSS- ja JavaScript-pohjainen portfolio, jonka suunnittelin ja rakensin itse AI-avusteisesti."
+    }
 ];
+
 
 
 // --------------------------------------

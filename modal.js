@@ -33,47 +33,87 @@ Kun jokainen projekti noudattaa samaa kaavaa, portfolio näyttää ammattimaisel
 // --------------------------------------
 // PROJECT DATA (carousel + grid + modal) - PROJEKTISTA LISÄTIETOA KLIKKATTUNA
 // --------------------------------------
-/* \n\n• - pieni cheatsheet jos on useampi ranskalaisviiva ja drop seuraavalle riville */
+/* \n\n• - pieni cheatsheet jos on useampi ranskalaisviiva ja drop seuraavalle riville ja huom. järjestys parannettu*/
 const projectsDetails = [
-    { 
-        title: "Projektikuva 1",
-        desc: "Lyhyt kuvaus projektista 1…",
-        details: "• Projekti toteutettiin aiemmassa työroolissa yritysympäristössä. Vastasin skriptin arkkitehtuurista, IAM-oikeuksista, token-hallinnasta ja automaation toteutuksesta. \n\n • Tavoitteena oli hakea Entra ID (Azure) -käyttäjätietoja PowerShellin kautta ja tuottaa niistä Excel-yhteensopiva CSV, joka lähetettiin automaattisesti SharePointin määriteltyyn kansiopolkuun. \n\n • Skripti kirjautui Microsoft-tilillä, haki Graph API -tokenin ja suodatti käyttäjät SQL-tyylisesti (esim. 'Matti' tai 'M-*'). Haetut attribuutit koottiin CSV:hen, jonka rakenne piti määritellä tarkasti. \n\n • Teknologiat: PowerShell, VS Code, Azure Entra ID, Microsoft Graph API, SharePoint, M365 Excel, Copilot, automaatio ja integraatiot. \n\n • Opin skriptirakenteen, jatkuvan testauksen ja SharePoint-viennin luotettavan toteutuksen. Lopputuloksena skripti tuotti selkeän taulukon ja lähetti sen oikeaan kansioon oikeilla käyttöoikeuksilla. Hyödynsin myös Copilotin (tekoäly) tukea skriptin suunnittelussa ja parantamisessa, mikä nopeutti työskentelyä ja auttoi varmistamaan ratkaisun turvallisuuden.",
 
+    // 1) HACKATHON
+    { 
+        title: "Luotea Hackathon – WorkPulse (3. sija)",
+        desc: "Lyhyt kuvaus projektista…",
+        details:
+            "• Luotea Hackathon 2026 – 48h kehityshaaste, jossa tavoitteena oli muuttaa kiinteistöjen data reaktiivisesta → ennakoivaksi ja tuottaa selkeä, datavetoinen demo tuomaristolle.\n\n" +
+            "• Työstimme 6 datasettiä (389 sensoria, 628 päivän dataa) sisältäen mm. käyttöasteen, sisäilman, energiankulutuksen ja huoltokeikat neljästä rakennuksesta.\n\n" +
+            "• Oma roolini: UI‑rakenteen suunnittelu, HTML‑pohjan rakentaminen, datan visualisointi ja tuomaristolle olennaisen informaation priorisointi. Käytin VS Code + GitHub Copilot Chat + Blackbox AI nopeaan iterointiin.\n\n" +
+            "• Tuin tiimiä datan analysoinnissa, käyttöaste‑ ja huoltokuormitusnäkymien rakentamisessa sekä pitchin sisällön rajaamisessa.\n\n" +
+            "• Lopputulos: selkeä web‑prototyyppi (WorkPulse), joka yhdisti datasetit yhteen näkymään ja auttoi tunnistamaan käyttöpiikkejä, SLA‑riskejä ja ennakoivia huoltotarpeita. Projekti sijoittui 3. sijalle.\n\n" +
+            "• Projektin GitHub: https://gellati.github.io/Luotea2026/",
+        image: "images/projekti6.png",
+    },
+
+    // 2) POWERSHELL + IAM
+    { 
+        title: "PowerShell-skriptit – automaatio ja IAM",
+        desc: "Lyhyt kuvaus projektista 1…",
+        details:
+            "• Rakensin Entra ID -pohjaisen automaation PowerShellillä. Skripti haki Graph API -tokenin, suodatti käyttäjät SQL-tyylisesti ja tuotti CSV‑raportin.\n\n" +
+            "• Skripti kirjautui Microsoft-tilillä, haki tokenin, suodatti käyttäjät (esim. 'Matti' tai 'M-*') ja rakensi Excel-yhteensopivan CSV:n.\n\n" +
+            "• Lopuksi CSV vietiin automaattisesti SharePoint-kansioon oikeilla käyttöoikeuksilla.\n\n" +
+            "• Teknologiat: PowerShell, VS Code, Entra ID, Graph API, SharePoint, M365 Excel, Copilot.\n\n" +
+            "• Opin skriptirakenteen, token-hallinnan ja automaation luotettavan toteutuksen.",
         image: "images/projekti1.png"
     },
 
+    // 3) WINDOWS SERVER
     { 
-        title: "Projektikuva 2",
-        desc: "Lyhyt kuvaus projektista 2…",
-        details: "• Pystytin oman Kali Linux -hiekkalaatikkoympäristön, jossa harjoittelin Linux-komentoja ja penetraatiotestauksen työkaluja. \n\n • Tutustuin keskeisiin tietoturvatyökaluihin ja analysointimenetelmiin sekä seurasin Cisco Academy -materiaalin Ethical Hacking -moduulia oppimisen tukena. \n\n • Harjoittelin Natas web-security -tehtäviä, joissa ratkaistaan tasokohtaisia haasteita analysoimalla verkkosivun toimintaa (lähdekoodi, JavaScript, evästeet, tietokanta) ja hyödyntämällä Kali Linuxin työkaluja. \n\n • Teknologiat ja työkalut: VMware Workstation, Kali Linux, HTML5, JavaScript, Python, Linux-ympäristö, OWASP, Nessus ja tiedustelutyökalut.",
-        image: "images/projekti2.png"
-    },
-
-    { 
-        title: "Projektikuva 3",
-        desc: "Lyhyt kuvaus projektista 3…",
-        details: "• Samassa Kali Linux -hiekkalaatikkoympäristössä asensin XAMPP-pohjaisen testipalvelimen ja rakensin oman MySQL-tietokannan phpMyAdminin kautta. \n\n • Suoritin tietokantaan kohdistuvia peruspentestauksia ja testasin erilaisia hyökkäysmenetelmiä kontrolloidussa ympäristössä. \n\n • Harjoitusten perusteella paransin omaa testisivua ja tietokantaa vahvistamalla kirjautumista, lisäämällä vahvempia salasanoja ja tarkastelemalla lokitietoja hyökkäysyritysten tunnistamiseksi. \n\n • Kysyin lisäksi tekoälyltä neuvoja liikenteen salaamisen ja palvelimen suojaamisen parantamiseen. Loinkin useita testikäyttäjiä ja rakensin pienen harjoitustietokannan (esim. pieni kauppasovellus), jossa harjoittelin MySQL-kyselyitä ja tietokantarakenteita. Lisäksi tutustuin ISO 27000 -standardin periaatteisiin ja siihen, miten niitä voi soveltaa peruspentestauksen tukena. \n\n • Teknologiat ja työkalut: Linux-ympäristö, XAMPP, MySQL, phpMyAdmin, HTTP/HTTPS, tietoturvatestauksen työkalut.",
-
-        image: "images/projekti3.png"
-    },
-
-    { 
-        title: "Projektikuva 4",
+        title: "Windows Server - yritysverkko projekti",
         desc: "Lyhyt kuvaus projektista 4…",
-        details: "• Rakensin Windows Server -hiekkalaatikkoympäristön, jossa toteutin oman yritysverkon ja lokaalin palvelimen. Harjoituksissa toimin sekä järjestelmänvalvojan että IT-tuen roolissa ja tarkastelin asioita myös loppukäyttäjän näkökulmasta. Ympäristö koostui kahdesta virtuaalikoneesta: palvelin (VM1) ja työasema (VM2). \n\n • Toteutin ja testasin GPO-asetuksia, käyttäjä- ja ryhmähallintaa, palvelutilejä, ABE-asetuksia, DNS-konfiguraatiota, sovellusten rajoituksia sekä PowerShell- ja Sysinternals-työkaluja. Harjoittelin myös GPO‑troubleshootingia ja käytin Microsoftin tarjoamia työkaluja, kuten mini kiosk -ratkaisua. \n\n • Pohdin myös, mitä tulee huomioida, jos fyysinen palvelin poistetaan käytöstä (rakenteet, käyttöoikeudet, riskit, vauriot, sopimustahot, sisäiset käyttäjät sekä mahdolliset katkokset ja muut poikkeavat tilanteet). \n\n • Tutustuin Windows Serverin keskeisiin palveluihin ja ominaisuuksiin, kuten BitLocker-salaukseen, Active Directoryyn, EFS-salaukseen, käyttöoikeuksiin, levyjakojen hallintaan ja muihin yritysverkkojen palvelinrooleihin.",
+        details:
+            "• Rakensin Windows Server -hiekkalaatikkoympäristön kahdella virtuaalikoneella (palvelin + työasema).\n\n" +
+            "• Harjoittelin AD:tä, GPO:ita, DNS:ää, palvelinrooleja, levyjakoja, ABE:tä, EFS:ää, BitLockeria ja PowerShelliä.\n\n" +
+            "• Toteutin käyttäjä- ja ryhmähallintaa, palvelutilejä, sovellusten rajoituksia ja GPO‑troubleshootingia.\n\n" +
+            "• Pohdin myös fyysisen palvelimen poistamisen riskejä ja vaikutuksia.\n\n" +
+            "• Ymmärsin paremmin yritysverkon rakenteen ja palvelinympäristön ylläpidon.",
         image: "images/projekti4.png",
     },
 
+    // 4) KALI LINUX – HIEKKALAATIKKO
     { 
-        title: "Projektikuva 5",
+        title: "Kali Linux – hiekkalaatikkotestit",
+        desc: "Lyhyt kuvaus projektista 2…",
+        details:
+            "• Pystytin oman Kali Linux -ympäristön ja harjoittelin tietoturvatyökaluja.\n\n" +
+            "• Seurasin Cisco Academy Ethical Hacking -moduulia.\n\n" +
+            "• Ratkaisin Natas web-security -tehtäviä (lähdekoodi, JS, evästeet, tietokanta-analyysi).\n\n" +
+            "• Teknologiat: VMware, Kali Linux, Python, OWASP, Nessus, tiedustelutyökalut.",
+        image: "images/projekti2.png"
+    },
+
+    // 5) MYSQL PENTEST
+    { 
+        title: "MySQL-tietokannan pentest Kali Linuxilla",
+        desc: "Lyhyt kuvaus projektista 3…",
+        details:
+            "• Asensin XAMPP-palvelimen ja rakensin oman MySQL-tietokannan.\n\n" +
+            "• Suoritin peruspentestauksia ja testasin hyökkäysmenetelmiä.\n\n" +
+            "• Paransin testisivua: vahvemmat salasanat, lokien tarkastelu, HTTPS.\n\n" +
+            "• Rakensin pienen harjoitustietokannan (esim. kauppasovellus) ja harjoittelin SQL-kyselyitä.\n\n" +
+            "• Teknologiat: XAMPP, MySQL, phpMyAdmin, HTTP/HTTPS, Linux.",
+        image: "images/projekti3.png"
+    },
+
+    // 6) PORTFOLIO
+    { 
+        title: "Portfolio-rakenne",
         desc: "Lyhyt kuvaus projektista 5…",
-        details: "• Tämä projekti liittyy suoraan tämän portfolion rakenteeseen ja ulkoasuun. \n\n • Hyödynsin tekoälyä suunnittelussa, ideoinnissa ja koodin parantamisessa, mutta rakensin portfolion itse HTML5-, CSS- ja JavaScript-teknologioilla. Selailin useita portfolioita inspiraatioksi ja yhdistin niistä toimivia ratkaisuja omaan tyyliini. \n\n • Suunnittelussa keskityin selkeyteen, tiiviisiin kuvauksiin ja helppolukuiseen rakenteeseen. Rakensin projektikortit, lisätietonäkymät, navigaation ja kokonaisuuden, joka toimii sekä puhelimessa, tabletissa että suurella näytöllä. \n\n • Tavoitteena oli luoda tekninen, ammattimainen ja yhtenäinen portfolio, joka esittelee osaamiseni selkeästi ja tukee tulevia työnhakutilanteita. \n\n • Tämän portfolion julkaisu ja lisäys Github ei ollut vaikeeta, josta olen aikaisemmin tehnyt ja vastaavasti yhteistietojen jättämisestä piti suorittaa varovasti etten kerro kaikkea tietoja",
+        details:
+            "• Rakensin tämän portfolion HTML5-, CSS- ja JavaScript-teknologioilla.\n\n" +
+            "• Hyödynsin tekoälyä suunnittelussa ja koodin parantamisessa.\n\n" +
+            "• Suunnittelin responsiivisen rakenteen, projektikortit, lisätietonäkymät ja navigaation.\n\n" +
+            "• Tavoitteena oli luoda selkeä, tekninen ja ammattimainen kokonaisuus.",
         image: "images/projekti5.png"    
     }
 
 ];
-
 
 
 // --------------------------------------
